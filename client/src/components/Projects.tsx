@@ -51,7 +51,7 @@ const Projects = () => {
     tech: ['React', 'Tailwind', 'Framer Motion', 'GSAP', 'shadcn/ui'],
     icon: Globe,
     github: 'https://github.com/ArpitaPanda261/Portfolio',
-    demo: 'https://comfy-pie-51a6f8.netlify.app/'
+    demo: 'https://portfolio-web06.netlify.app/'
   }
 ];
 
