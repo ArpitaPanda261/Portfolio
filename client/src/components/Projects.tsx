@@ -47,11 +47,11 @@ const Projects = () => {
     id: 3,
     title: 'Animated Portfolio Website',
     description: 'A modern and animated portfolio built with React, Tailwind CSS, GSAP, and Framer Motion. It features responsive layouts, scroll animations, and a dark UI theme with shadcn/ui.',
-    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1601987077608-52106baf995b?auto=compress&cs=tinysrgb&w=800',
     tech: ['React', 'Tailwind', 'Framer Motion', 'GSAP', 'shadcn/ui'],
     icon: Globe,
-    github: 'https://github.com/yourusername/your-portfolio',
-    demo: 'https://yourportfolio.vercel.app'
+    github: 'https://github.com/ArpitaPanda261/Portfolio',
+    demo: 'https://comfy-pie-51a6f8.netlify.app/'
   }
 ];
 
