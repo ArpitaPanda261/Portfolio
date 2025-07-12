@@ -72,7 +72,7 @@ const Contact = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post("http://localhost:5000/api/contact", formData);
+      const response = await axios.post("https://portfolio-server-vqpb.onrender.com/api/contact", formData);
       console.log("✅ Form submitted:", response.data);
       toast.success("🎉 Your message has been sent!");
       setFormData({ name: "", email: "", subject: "", message: "" });

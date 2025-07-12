@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "client": "cd client && vite",
-    "server": "node server/app.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "client": "cd client && vite",
+  "server": "node server/app.js",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "build": "cd client && npm install && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.10.0",
