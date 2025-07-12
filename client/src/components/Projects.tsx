@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ExternalLink, Github, Smartphone, Globe, ShoppingCart } from 'lucide-react';
+import portfolio from '../assets/portfolio.png'; // <-- Add this import
+
 
 const Projects = () => {
   useEffect(() => {
@@ -47,7 +49,7 @@ const Projects = () => {
     id: 3,
     title: 'Animated Portfolio Website',
     description: 'A modern and animated portfolio built with React, Tailwind CSS, GSAP, and Framer Motion. It features responsive layouts, scroll animations, and a dark UI theme with shadcn/ui.',
-    image: 'https://images.unsplash.com/photo-1601987077608-52106baf995b?auto=compress&cs=tinysrgb&w=800',
+    image: portfolio, // <-- Use the imported image here
     tech: ['React', 'Tailwind', 'Framer Motion', 'GSAP', 'shadcn/ui'],
     icon: Globe,
     github: 'https://github.com/ArpitaPanda261/Portfolio',
