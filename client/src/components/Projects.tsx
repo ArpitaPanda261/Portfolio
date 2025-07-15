@@ -1,50 +1,42 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
-import { gsap } from "gsap";
-import {
-  ExternalLink,
-  Github,
-  Smartphone,
-  Globe,
-  ShoppingCart,
-} from "lucide-react";
-import portfolio from "../assets/portfolio.png";
-import chatterbox from "../assets/chatterbox.png"
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
+import { ExternalLink, Github, Smartphone, Globe, ShoppingCart } from 'lucide-react';
+import portfolio from '../assets/portfolio.png'; 
+import chatterbox from '../assets/chatterbox.png';
+
 
 const Projects = () => {
   useEffect(() => {
-    gsap.fromTo(
-      ".project-card",
+    gsap.fromTo('.project-card', 
       { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
+      { 
+        opacity: 1, 
+        y: 0, 
         duration: 0.8,
         stagger: 0.2,
         scrollTrigger: {
-          trigger: ".projects-grid",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
+          trigger: '.projects-grid',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse'
+        }
       }
     );
   }, []);
 
   const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description:
-        "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      icon: ShoppingCart,
-      github: "#",
-      demo: "#",
-    },
-    {
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
+    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    icon: ShoppingCart,
+    github: '#',
+    demo: '#'
+  },
+  {
       id: 2,
       title: "Chatter Box App",
       description:
@@ -52,21 +44,21 @@ const Projects = () => {
       image:chatterbox,
       tech: ["MongoDB", "Express", "React", "Node.js"],
       icon: Smartphone,
-      github: "https://github.com/your-username/chatter-box", // Replace with your actual GitHub repo link
+      github: "https://github.com/ArpitaPanda261/Chatter-Box",
       demo: "https://chatter-box-web06.netlify.app",
     },
-    {
-      id: 3,
-      title: "Animated Portfolio Website",
-      description:
-        "A modern and animated portfolio built with React, Tailwind CSS, GSAP, and Framer Motion. It features responsive layouts, scroll animations, and a dark UI theme with shadcn/ui.",
-      image: portfolio, // <-- Use the imported image here
-      tech: ["React", "Tailwind", "Framer Motion", "GSAP", "shadcn/ui"],
-      icon: Globe,
-      github: "https://github.com/ArpitaPanda261/Portfolio",
-      demo: "https://portfolio-web06.netlify.app/",
-    },
-  ];
+  {
+    id: 3,
+    title: 'Animated Portfolio Website',
+    description: 'A modern and animated portfolio built with React, Tailwind CSS, GSAP, and Framer Motion. It features responsive layouts, scroll animations, and a dark UI theme with shadcn/ui.',
+    image: portfolio, // <-- Use the imported image here
+    tech: ['React', 'Tailwind', 'Framer Motion', 'GSAP', 'shadcn/ui'],
+    icon: Globe,
+    github: 'https://github.com/ArpitaPanda261/Portfolio',
+    demo: 'https://portfolio-web06.netlify.app/'
+  }
+];
+
 
   return (
     <section id="projects" className="py-20 bg-black">
@@ -81,8 +73,7 @@ const Projects = () => {
             My <span className="text-blue-400">Projects</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and
-            passion for development
+            Here are some of my recent projects that showcase my skills and passion for development
           </p>
         </motion.div>
 
@@ -104,15 +95,13 @@ const Projects = () => {
                   <project.icon className="text-white" size={24} />
                 </div>
               </div>
-
+              
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
-
+                
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
@@ -123,7 +112,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-
+                
                 <div className="flex space-x-4">
                   <motion.a
                     href={project.github}
